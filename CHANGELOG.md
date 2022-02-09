@@ -1,3 +1,7 @@
+## v0.1.12 [2022-02-09]
+
+- Add support for 2 new AWS regions, af-south-1, me-south-1
+
 ## v0.1.11 [2018-06-21]
 
 **Check out our new article** on [Simplified Multi-Factor Authentication](https://medium.com/@awlessCLI/simplified-multi-factor-authentication-for-aws-d703e8d9f332) with `awless`
