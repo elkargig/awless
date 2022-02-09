@@ -111,7 +111,7 @@ func StdinInstanceTypeSelector() string {
 }
 
 func IsValidRegion(given string) bool {
-	reg, _ := regexp.Compile("^(us|eu|ap|sa|ca)\\-\\w+\\-\\d+$")
+	reg, _ := regexp.Compile("^(us|eu|ap|sa|ca|af|me)\\-\\w+\\-\\d+$")
 	regChina, _ := regexp.Compile("^cn\\-\\w+\\-\\d+$")
 	regUsGov, _ := regexp.Compile("^us\\-gov\\-\\w+\\-\\d+$")
 
