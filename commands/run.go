@@ -507,6 +507,8 @@ func getTemplateText(path string) (content []byte, expanded string, err error) {
 
 func removeComments(b []byte) []byte {
 	scn := bufio.NewScanner(bytes.NewReader(b))
+	buf := make([]byte, 0, 64*1024)
+	scn.Buffer(buf, 1024*1024)
 	var cleaned bytes.Buffer
 	for scn.Scan() {
 		line := scn.Text()

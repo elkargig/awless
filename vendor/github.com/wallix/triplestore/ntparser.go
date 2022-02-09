@@ -20,6 +20,8 @@ func newLenientNTParser(r io.Reader) *lenientNTParser {
 func (p *lenientNTParser) Parse() (out []Triple, err error) {
 	var count int
 	scanner := bufio.NewScanner(p.r)
+	buf := make([]byte, 0, 64*1024)
+	scanner.Buffer(buf, 1024*1024)
 	for scanner.Scan() {
 		count++
 		line := bytes.TrimLeft(scanner.Bytes(), " \t")
